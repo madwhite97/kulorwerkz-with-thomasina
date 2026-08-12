@@ -19,6 +19,15 @@ export default function Portfolio() {
 
     const [selectedIndex, setSelectedIndex] = useState(null);
 
+    useEffect(() => {
+        window.history.scrollRestoration = "manual";
+        window.scrollTo(0, 0);
+
+        return () => {
+            window.history.scrollRestoration = "auto";
+        };
+    }, []);
+
     const nextImage = () => {
         setSelectedIndex((prev) =>
             prev === images.length - 1 ? 0 : prev + 1

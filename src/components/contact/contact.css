@@ -1091,6 +1091,10 @@
 
     }
 
+    .contact-heading .heading-script {
+        margin-top: 0.35rem;
+    }
+
 }
 
 @media (prefers-reduced-motion:reduce){

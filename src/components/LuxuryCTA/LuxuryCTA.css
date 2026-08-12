@@ -142,20 +142,36 @@
 
 @media (max-width: 768px) {
 
+    .luxury-cta {
+        padding-bottom: 30px;
+    }
+
     .luxury-card {
 
-        padding: 55px 30px;
+        padding: 55px 25px;
     }
 
     .luxury-features {
-
-        flex-direction: column;
-
-        gap: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 45px;
+        align-items: start;
     }
 
     .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        font-size: .9rem;
+        line-height: 1.5;
+    }
 
-        justify-content: center;
+    .feature svg {
+        width: 24px;
+        height: 24px;
     }
 }

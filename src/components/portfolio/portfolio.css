@@ -778,3 +778,29 @@
     }
 
 }
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.portfolio-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.portfolio-gallery {
+    width: 100%;
+    max-width: 100%;
+}
+
+.portfolio-image {
+    max-width: 100%;
+}
+
+.portfolio-image img {
+    display: block;
+    max-width: 100%;
+}
