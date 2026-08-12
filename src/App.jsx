@@ -12,36 +12,49 @@ import Footer from "./components/footer/Footer";
 
 import Portfolio from "./components/portfolio/Portfolio";
 
+
 function HomePage() {
-  
-  useEffect(() => {
+    useEffect(() => {
+        if (window.location.hash === "#contact") {
+            setTimeout(() => {
+                document
+                    .getElementById("contact")
+                    ?.scrollIntoView({
+                        behavior: "smooth",
+                    });
+            }, 100);
+        }
+    }, []);
 
-    if (window.location.hash === "#contact") {
+    return (
+        <>
+            <Hero />
+            <Services />
+            <LuxuryCTA />
+            <Gallery />
+            <InstagramCTA />
+            <Reviews />
+            <Contact />
+            <Footer />
+        </>
+    );
+}
 
-      setTimeout(() => {
 
-        document
-          .getElementById("contact")
-          ?.scrollIntoView({
-            behavior: "smooth",
-          });
+export default function App() {
+    return (
+        <Routes>
 
-      }, 100);
+            <Route
+                path="/"
+                element={<HomePage />}
+            />
 
-    }
+            <Route
+                path="/portfolio"
+                element={<Portfolio />}
+            />
 
-  }, []);
-
-  return (
-    <>
-      <Hero />
-      <Services />
-      <LuxuryCTA />
-      <Gallery />
-      <InstagramCTA />
-      <Reviews />
-      <Contact />
-      <Footer />
-    </>
-  );
+        </Routes>
+    );
 }
