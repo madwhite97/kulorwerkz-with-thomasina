@@ -308,7 +308,7 @@
 
 .portfolio-image:hover img {
 
-    transform: sclae(1.05);
+    transform: scale(1.05);
 
     filter:
         brightness(.72);
@@ -682,7 +682,7 @@
     ANIMATIONS
 ============================== */
 
-@keygrams fadeIn {
+@keyframes fadeIn {
 
     from {
 
@@ -698,7 +698,7 @@
 
 }
 
-@keyframs zoomIn {
+@keyframes zoomIn {
 
     from {
 
@@ -803,4 +803,16 @@ body {
 .portfolio-image img {
     display: block;
     max-width: 100%;
+}
+
+@media (max-width: 480px) {
+
+    .portfolio-page {
+        padding-bottom: 1rem;
+    }
+
+    .portfolio-cta {
+        margin-bottom: 1rem;
+    }
+
 }

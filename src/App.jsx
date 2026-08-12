@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Hero from "./components/hero/Hero";
@@ -12,6 +13,25 @@ import Footer from "./components/footer/Footer";
 import Portfolio from "./components/portfolio/Portfolio";
 
 function HomePage() {
+  
+  useEffect(() => {
+
+    if (window.location.hash === "#contact") {
+
+      setTimeout(() => {
+
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({
+            behavior: "smooth",
+          });
+
+      }, 100);
+
+    }
+
+  }, []);
+
   return (
     <>
       <Hero />
@@ -23,23 +43,5 @@ function HomePage() {
       <Contact />
       <Footer />
     </>
-  );
-}
-
-export default function App() {
-  return (
-    <Routes>
-
-      <Route
-        path="/"
-        element={<HomePage />}
-      />
-
-      <Route
-        path="/portfolio"
-        element={<Portfolio />}
-      />
-
-    </Routes>
   );
 }
