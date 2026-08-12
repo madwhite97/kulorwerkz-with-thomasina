@@ -1141,3 +1141,12 @@
     cursor: wait;
     transform: none;
 }
+
+/* Desktop - Lower the contact form */
+@media(min-width: 1025px) {
+
+    .contact-right {
+        padding-top: 90px;
+    }
+    
+}
