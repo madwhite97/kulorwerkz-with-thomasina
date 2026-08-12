@@ -274,7 +274,7 @@
 
     .footer {
 
-        padding: 4rem 1rem 2rem;
+        padding: 2rem 1rem 2rem;
 
     }
 
@@ -287,6 +287,7 @@
     .footer-script {
 
         font-size: 1.35rem;
+        margin-bottom: 1.25rem;
 
     }
 
@@ -302,7 +303,7 @@
         font-size: .85rem;
 
     }
-
+    
 }
 
 .footer-credit span {

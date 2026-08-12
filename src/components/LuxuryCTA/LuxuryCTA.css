@@ -152,26 +152,40 @@
     }
 
     .luxury-features {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
         margin-bottom: 45px;
-        align-items: start;
+        width: 100%;
     }
 
     .feature {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
         text-align: center;
-        font-size: .9rem;
-        line-height: 1.5;
+        gap: 0.5rem;
+        margin: 0 auto;
     }
 
     .feature svg {
         width: 24px;
         height: 24px;
     }
+}
+
+@media (max-width:480px) {
+
+    .luxury-cta {
+        padding-bottom: 15px;
+    }
+
+    .luxury-card {
+        padding-bottom: 35px;
+    }
+
 }
