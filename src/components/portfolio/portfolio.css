@@ -1,0 +1,780 @@
+/* ==============================
+    PORTFOLIO PAGE
+============================== */
+
+.portfolio-page {
+
+    --bg: #070707;
+
+    --gold: #D8B46A;
+    --gold-light: #F2D28B;
+
+    --pink: #D88AA5;
+    --pink-ligh: #F2C4D2;
+
+    --text: #F8F5F2;
+    --muted: #BBB5AF;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(216,138,165,.03),
+            transparent 42%
+        ),
+        linear-gradient(
+            180deg,
+            #070707 0%,
+            #090909 100%
+        );
+
+    color: var(--text);
+
+    overflow: hidden;
+
+}
+
+/* ==============================
+    PAGE CONTAINER
+============================== */
+
+.portfolio-page {
+
+    padding:
+        3rem
+        0
+        8rem;
+
+}
+
+/* ==============================
+    RETURN HOME
+=============================== */
+
+.back-home {
+
+    width: min(1400px, calc(100% - 8rem));
+
+    margin: 2rem auto 5rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .65rem;
+
+    color: var(--gold);
+
+    text-decoration: none;
+
+    font-size: .95rem;
+
+    letter-spacing: .08rem;
+
+    transition: all .35s ease;
+
+}
+
+.back-home:hover {
+
+    color: var(--pink);
+
+    transform: translateX(-6px);
+
+}
+
+/* ==============================
+    HERO
+============================== */
+
+.portfolio-hero {
+
+    width: min(900px, calc(100% - 4rem));
+
+    margin: 0 auto 7rem;
+
+    text-align: center;
+
+}
+
+/* ==============================
+    EYEBROW
+============================== */
+
+.portfolio-tag {
+
+    color: var(--pink);
+
+    text-transform: uppercase;
+
+    letter-spacing: .45rem;
+
+    font-size: .82rem;
+
+    margin-bottom: 1rem;
+
+}
+
+/* ==============================
+    HEADING
+============================== */
+
+.portfolio-heading {
+
+    line-height: .9;
+
+    margin-bottom: 2rem;
+
+}
+
+.portfolio-heading .gold {
+
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(4.8rem,8vw,7rem);
+
+    font-weight: 500;
+
+    color: var(--gold);
+
+}
+
+.portfolio-heading .script {
+
+    display: block;
+
+    margin-top: .95rem;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(4.6rem,7vw,6.6rem);
+
+    color: var(--pink);
+
+}
+
+/* ==============================
+    DIVIDER
+============================== */
+
+.portfolio-divider {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    max-width: 420px;
+
+    margin: 2rem auto;
+
+}
+
+.portfolio-divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            
+            transparent,
+
+            rgba(216,180,106,.8),
+
+            transparent
+
+        );
+
+}
+
+.portfolio-divider svg {
+
+    color: var(--gold);
+
+}
+
+/* ==============================
+    INTRO
+============================== */
+
+.portfolio-intro {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    line-height: 2;
+
+    font-size: 1.08rem;
+}
+
+/* ==============================
+    GALLERY
+============================== */
+
+.portfolio-gallery {
+
+    width: min(1500px, calc(100% - 6rem));
+
+    margin: 0 auto 8rem;
+
+    column-count: 4;
+
+    column-gap: 1.6rem;
+
+}
+
+/* ==============================
+    IMAGE CARD
+============================== */
+
+.portfolio-image {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 1.6rem;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    break-inside: avoid;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.portfolio-image:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.35);
+
+}
+
+/* ==============================
+    IMAGE
+============================== */
+
+.portfolio-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+
+}
+
+.portfolio-image:hover img {
+
+    transform: sclae(1.05);
+
+    filter:
+        brightness(.72);
+}
+
+/* ==============================
+    OVERLAY
+============================== */
+
+.portfolio-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transition: .35s ease;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(0,0,0,.04),
+
+            rgba(0,0,0,.18)
+        
+        );
+
+}
+
+.portfolio-image:hover .portfolio-overlay {
+
+    opacity: 1;
+
+}
+
+/* ==============================
+    GOLD GLOW
+============================== */
+
+.portfolio-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 24px;
+
+    border:
+
+        1px solid
+
+        rgba(216,180,106,0);
+
+    transition: .35s ease;
+
+    pointer-events: none;
+
+}
+
+.portfolio-image:hover::after {
+
+    border-color:
+
+        rgba(216,180,106,.35);
+
+}
+
+/* ==============================
+    BOTTOM CTA
+============================== */
+
+.portfolio-cta {
+
+    width: min(850px, calc(100% - 4rem));
+
+    margin: 8rem auto 4rem;
+
+    text-align: center;
+
+}
+
+.portfolio-cta h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.8rem,5vw,4rem);
+
+    font-weight: 500;
+
+    color: var(--gold);
+
+    margin-bottom: 1rem;
+
+    line-height: 1.1;
+
+}
+
+.portfolio-cta p {
+
+    max-width: 600px;
+
+    margin: 0 auto 2.5rem;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+}
+
+.portfolio-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        
+        1rem
+        2.8rem;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: .85rem;
+
+    letter-spacing: .18rem;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+
+    color: #161616;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #d88aa5,
+            #f0d28a
+        );
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(216,138,165,.25);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.portfolio-button:hover {
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 22px 45px
+        rgba(216,138,165,.35);
+
+}
+
+/* ==============================
+    PORTFOLIO LIGHTBOX
+============================== */
+
+.portfolio-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(18,18,18,.96),
+            rgba(0,0,0,.98)
+        );
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    animation: fadeIn .3s ease;
+
+}
+
+/* ==============================
+    IMAGE
+============================== */
+
+.portfolio-lightbox-image {
+
+    max-width: 88vw;
+
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border-radius: 24px;
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.55),
+
+        0 0 0 1px rgba(216,180,106,.15);
+
+    animation: zoomIn .3s ease;
+
+}
+
+/* ==============================
+    CLOSE BUTTON
+============================== */
+
+.portfolio-lightbox-close {
+
+    position: absolute;
+
+    top: 2rem;
+
+    right: 2rem;
+
+    width: 54px;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255,255,255,.08);
+
+    color: var(--gold);
+
+    transition: .3s ease;
+
+}
+
+.portfolio-lightbox-close:hover {
+
+    background:rgba(216,180,106,.18);
+
+    color: white;
+
+}
+
+/* ==============================
+    NAVIGATION
+============================== */
+
+.portfolio-lightbox-prev,
+.portfolio-lightbox-next {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 62px;
+
+    height: 62px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255,255,255,.08);
+
+    color: var(--gold);
+
+    transition: .3s ease;
+
+}
+
+.portfolio-lightbox-prev {
+
+    left: 2rem;
+
+}
+
+.portfolio-lightbox-next {
+
+    right: 2rem;
+
+}
+
+.portfolio-lightbox-prev:hover,
+.portfolio-lightbox-next:hover {
+
+    background: rgba(216,180,106,.18);
+
+    color: white;
+
+    transform: translateY(-50%) scale(1.08);
+
+}
+
+/* ==============================
+    COUNTER
+============================== */
+
+.portfolio-lightbox-counter {
+
+    position: absolute;
+
+    bottom: 2rem;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--gold-light);
+
+    font-size: .9rem;
+
+    letter-spacing: .18rem;
+
+    text-transform: uppercase;
+
+    padding: .8rem 1.4rem;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(216,180,106,.18);
+
+}
+
+/* ==============================
+    ANIMATIONS
+============================== */
+
+@keygrams fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframs zoomIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==============================
+    MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+    .portfolio-lightbox-image {
+
+        max-width: 94vw;
+
+        max-height: 75vh;
+
+        border-radius: 18px;
+
+    }
+
+    .portfolio-lightbox-prev,
+    .portfolio-lightbox-next {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+    .portfolio-lightbox-prev {
+
+        left: 1rem;
+
+    }
+
+    .portfolio-lightbox-next {
+
+        right: 1rem;
+
+    }
+
+    .portfolio-lightbox-close {
+
+        top: 1rem;
+
+        right: 1rem;
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+    .portfolio-lightbox-counter {
+
+        bottom: 1.25rem;
+
+        font-size: .8rem;
+
+        letter-spacing: .12rem;
+
+    }
+
+}

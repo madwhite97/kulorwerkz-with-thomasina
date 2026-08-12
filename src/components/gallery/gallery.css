@@ -1,0 +1,435 @@
+/* ====================
+    GALLERY SECTION
+==================== */
+
+.gallery-section {
+    background: #050505;
+    padding-top: 35px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+/* ====================
+    HEADER
+==================== */
+
+.gallery-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 80px;
+}
+
+.gallery-eyebrow {
+    display: inline-block;
+    color: #d8c39a;
+    font-size: .8rem;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.gallery-header h2 {
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.gallery-header h2 span {
+    color: #ddb7bf;
+}
+
+.gallery-header p {
+    color: rgba(255,255,255,.72);
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+/* ====================
+    MASONRY GRID
+==================== */
+.gallery-grid {
+    column-count: 4;
+    column-gap: 24px;
+
+    padding: 0 20px;
+}
+
+.gallery-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 24px;
+    break-inside: avoid;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #111;
+    border: 1px solid rgba(216,195,154,.10);
+    transition: .45s ease;
+}
+
+/* ====================
+    CARD
+==================== */
+
+
+.gallery-card img {
+    width: 100%;
+    display: block;
+    transition: transform .8s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(216,195,154,.45);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.35),
+    0 0 45px rgba(216,195,154,.12);
+
+}
+
+/* ====================
+    OVERLAY
+==================== */
+
+.gallery-overlay {
+    position: absolute;
+    
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(0,0,0,.35);
+
+    opacity: 0;
+
+    transition: .35s;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay svg {
+    
+    color: #d8c39a;
+    opacity: 0;
+    transform: scale(.8);
+    transition: .35s;
+}
+
+.gallery-card:hover .gallery-overlay svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ====================
+    CTA
+==================== */
+
+.gallery-cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 120px auto 0;
+}
+
+.gallery-cta-eyebrow {
+    display: inline-block;
+    color: #d8c39a;
+    letter-spacing: .35em;
+    font-size: .8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.gallery-cta h2 {
+    color: white;
+    font-family: "Cormorant Garamond",serif;
+    font-size: 3rem;
+    margin-bottom: 22px;
+}
+
+.gallery-cta p {
+    color: rgba(255,255,255,.72);
+    line-height: 1.9;
+    margin-bottom: 42px;
+}
+
+/* ====================
+    BUTTON
+==================== */
+
+.gallery-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 40px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    background: linear-gradient(
+        180deg,
+        #efd8bc,
+        #d8b37a
+    );
+    transition: .35s;
+}
+
+.gallery-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(216,179,122,.35);
+}
+
+/* ====================
+    LIGHTBOX
+===================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(3,3,3,.88);
+    backdrop-filter: blur(18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 40px;
+    animation: fadeIn .3s ease;
+}
+
+.lightbox img {
+    max-width: 92%;
+    max-height: 90vh;
+
+    border-radius: 18px;
+
+    animation: lightboxFade .35s ease;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.55);
+}
+
+@keyframes lightboxFade {
+
+    from{
+        opacity: 0;
+        transform: scale(.97);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.lightbox-close:hover {
+    color: #ddb7bf;
+}
+
+.lightbox-prev,
+.lightbox-next {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(216,195,154,.25);
+
+    background: rgba(0,0,0,.25);
+
+    backdrop-filter: blur(20px);
+
+    color: #d8c39a;
+
+    cursor: pointer;
+    
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .35s ease;
+
+}
+
+.lightbox-prev {
+    left: 50px;
+}
+
+.lightbox-next {
+    right: 50px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+
+    background: rgba(216,195,154,.12);
+
+    transform:translateY(-50%) scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(216,195,154,.20);
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d8c39a;
+    font-size: .95rem;
+    letter-spacing: .15em;
+}
+
+/* =====================
+    ANIMATION
+==================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+    }
+
+    to{
+
+        opacity: 1;
+    }
+}
+
+/* ====================
+    RESPONSIVE
+===================== */
+
+@media (max-width: 1200px) {
+
+    .gallery-grid {
+        column-count: 3;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .gallery-grid {
+        column-count: 2;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .gallery-grid {
+        column-count: 1;
+    }
+
+}
+
+/* ==============================
+    PORTFOLIO BUTTON
+============================== */
+
+.gallery-button-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 4rem;
+
+}
+
+.gallery-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+
+        1rem
+        2.75rem;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: white;
+
+    letter-spacing: .16rem;
+
+    text-transform: uppercase;
+
+    font-size: .82rem;
+
+    font-weight: 600;
+
+    background:
+        
+        linear-gradient(
+            135deg,
+            #d88aa5,
+            #d8b46a
+        );
+
+    box-shadow:
+
+        0 16px 35px
+        rgba(216,138,165,.22);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.gallery-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+
+        0 24px 45px
+        rgba(216,138,165,.32);
+        
+}

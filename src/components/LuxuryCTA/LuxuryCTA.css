@@ -1,0 +1,161 @@
+.luxury-cta {
+    padding: 5px 20px 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.luxury-card {
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 70px 60px;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18,18,18,.95),
+            rgba(10,10,10,.98)
+        );
+    
+        border: 1px solid rgba(216,195,154,.06);
+
+        box-shadow:
+            0 0 60px rgba(216,195,154,.06);
+}
+
+.luxury-eyebrow {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #ddb7bf;
+
+    letter-spacing: 4px;
+
+    font-size: .85rem;
+
+    text-transform: uppercase;
+}
+
+.luxury-card h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.7em,6vw,4rem);
+
+    color: white;
+
+    line-height: 1.05;
+
+    margin-bottom: 24px;
+}
+
+.luxury-card p {
+
+    max-width: 620px;
+
+    margin: 0 auto 50px;
+
+    color: #c8c8c8;
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+}
+
+.luxury-features {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 55px;
+
+}
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+.feature svg {
+
+    width: 26px;
+
+    height: 26px;
+
+    color: #ddb7bf;
+}
+
+.luxury-button {
+
+    display: inline-block;
+
+    padding: 18px 42px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8c39a,
+            #f3e5bf
+        );
+
+    transition: .35s ease;
+
+    box-shadow:
+        0 12px 35px rgba(216,195,154,.25);
+}
+
+.luxury-button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(216,195,154,.35);
+}
+
+@media (max-width: 768px) {
+
+    .luxury-card {
+
+        padding: 55px 30px;
+    }
+
+    .luxury-features {
+
+        flex-direction: column;
+
+        gap: 24px;
+    }
+
+    .feature {
+
+        justify-content: center;
+    }
+}

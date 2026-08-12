@@ -1,0 +1,106 @@
+.instagram-cta {
+    padding: 5rem 0 6rem;
+    
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-cta::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -200px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(216,195,154,.08) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.instagram-divider {
+
+    color: var(--color-accent);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 1rem;
+
+    letter-spacing: .35rem;
+}
+
+.instagram-eyebrow {
+    
+    color: #d8c39a;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+
+    font-size: .8rem;
+
+    margin-bottom: 1rem;
+}
+
+.instagram-cta h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2rem,4vw,3.25rem);
+
+    color: white;
+
+    margin-bottom: 1rem;
+}
+
+.instagram-text {
+    max-width: 560px;
+
+    margin: 0 auto 2.5rem;
+
+    color: rgba(255,255,255,.72);
+
+    line-height: 1.9;
+}
+
+.instagram-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .75rem;
+
+    padding: 1rem 2rem;
+
+    border: 1px solid rgba(216,195,154,.3);
+
+    border-radius: 999px;
+
+    color: #d8c39a;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(14px);
+
+    background: rgba(255,255,255,.03);
+
+    transition: .35s ease;
+}
+
+.instagram-button:hover {
+    
+    transform: translateY(-4px);
+
+    background: rgba(216,195,154,.08);
+
+    border-color: #d8c39a;
+
+    box-shadow: 0 15px 40px rgba(216,195,154,.15);
+}

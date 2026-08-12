@@ -1,0 +1,276 @@
+/* ===================
+    SECTION
+==================== */
+
+.services {
+
+    position: relative;
+
+    padding: 150px 40px 40px;
+
+    background:
+        linear-gradient(
+            rgba(8,8,8,.60),
+            rgba(8,8,8,.90)
+        ),
+        url("../../assets/images/services/services-bg.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    color: white;
+}
+
+/* ===================
+    CONTAINER
+==================== */
+
+.services > *{
+
+    max-width: 1500px;
+
+    margin-inline: auto;
+}
+
+/* ====================
+    HEADER
+===================== */
+
+.services-header {
+    
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: #d8c39a;
+
+    text-transform: uppercase;
+
+    letter-spacing: .35em;
+
+    font-size: .85rem;
+
+    margin-bottom: 18px;
+}
+
+.services-header h2 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 5rem;
+
+    line-height: 1;
+}
+
+.services-header h2 span {
+
+    color: #d8c39a;
+
+}
+
+.title-line {
+
+    width: 110px;
+
+    height: 1px;
+    
+    background: #caa15c;
+
+    margin: 34px auto;
+}
+
+.services-header p {
+    
+    max-width: 760px;
+
+    margin: auto;
+
+    color: #d6d6d6;
+
+    line-height: 1.8;
+
+    font-size: 1.08rem;
+}
+
+/* ====================
+    GRID
+==================== */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    gap: 22px;
+
+    margin-top: 70px;
+}
+
+/* ====================
+    CARD
+==================== */
+
+.service-card {
+
+    background: rgba(14,14,14,.58);
+
+    border: 1px solid rgba(212,175,55,.55);
+
+    border-radius: 18px;
+
+    padding: 42px 26px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: .35s ease;
+}
+
+.service-card:hover {
+
+    transform:translateY(-8px);
+
+    border-color: #e2be68;
+
+    box-shadow:
+        0 0 40px rgba(212,175,55,.15);
+}
+
+.service-icon {
+
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #d8c39a;
+
+    margin-bottom: 22px;
+}
+
+.service-icon svg {
+
+    width: 50px;
+    height: 50px;
+
+    color: #d8c39a;
+
+    stroke-width: 1.6;
+
+    margin-bottom: 1.6rem;
+
+    transition: all .35s ease;
+}
+
+.service-card h3 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 2rem;
+    
+    color: #ddb7bf;
+}
+
+.gold-line {
+
+    width: 52px;
+
+    height: 1px;
+
+    background: #caa15c;
+
+    margin: 18px 0;
+}
+
+.service-card p {
+
+    color: #d6d6d6;
+
+    line-height: 1.8;
+    
+    margin-bottom: 28px;
+}
+
+.price {
+
+    margin-top: auto;
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 2.5rem;
+
+    color: #d8c39a;
+}
+
+/* ====================
+    RESPONSIVE
+==================== */
+
+@media (max-width: 1200px) {
+
+    .services-grid {
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .booking-cta {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .cta-image {
+
+        height: 220px;
+    }
+
+    .cta-content {
+        
+        padding: 40px 30px;
+    }
+
+    .cta-button {
+
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .services {
+
+        padding: 80px 20px;
+    }
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .services-header h2 {
+
+        font-size: 3rem;
+    }
+}
