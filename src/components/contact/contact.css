@@ -930,73 +930,78 @@
 @media (max-width:768px){
 
     .contact{
-
         padding:5rem 0;
-
     }
 
     .contact-container{
-
         width:min(100%, calc(100% - 3rem));
-
     }
 
     .contact-left{
-
         text-align:center;
-
     }
 
     .contact-divider{
-
         margin-left:auto;
-
         margin-right:auto;
-
     }
 
     .contact-intro{
-
         margin:0 auto 3rem;
-
     }
 
     .contact-details{
-
         grid-template-columns:1fr;
-
         gap:2rem;
-
     }
 
     .contact-artwork{
-
         justify-content:center;
-
     }
 
     .contact-artwork img{
-
         width:300px;
-
         transform:none;
-
     }
 
-    .contact-info{
+    .contact-info {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        padding-top: 0;
 
-        padding-top:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        max-width:500px;
-
-        margin:0 auto;
-
+        gap: 2.2rem;
     }
 
-    .contact-item{
+    .contact-item {
+        display: flex;
+        flex-direction: row;
 
-        text-align:left;
+        align-items: flex-start;
+        justify-content: center;
 
+        width: 100%;
+        max-width: 420px;
+
+        gap: 1.2rem;
+
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .contact-text {
+        flex: 1;
+        padding-top: .35rem;
+    }
+
+    .contact-icon {
+        flex-shrink: 0;
+        margin: 0;
     }
 
 }
@@ -1018,6 +1023,7 @@
     .heading-gold {
 
         font-size: 3.8rem;
+        text-align: center;
     }
 
     .heading-script{
@@ -1025,6 +1031,7 @@
         font-size:3.8rem;
 
         margin-top:-.5rem;
+        text-align: center;
 
     }
 
@@ -1090,6 +1097,13 @@
 
     .contact-heading .heading-script {
         margin-top: 0.35rem;
+    }
+
+    .contact-heading {
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
