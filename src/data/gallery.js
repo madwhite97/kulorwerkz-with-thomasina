@@ -81,11 +81,6 @@ const gallery = [
     },
     {
         id: 17,
-        image: "/images/gallery/nails-16.jpg",
-        alt: "Luxury nail set",
-    },
-    {
-        id: 17,
         image: "/images/gallery/nails-17.jpg",
         alt: "Luxury nail set",
     },

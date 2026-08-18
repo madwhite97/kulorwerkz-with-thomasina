@@ -12,6 +12,8 @@ import Footer from "./components/footer/Footer";
 
 import Portfolio from "./components/portfolio/Portfolio";
 
+import SEO from "./components/SEO";
+
 
 function HomePage() {
     useEffect(() => {
@@ -28,6 +30,11 @@ function HomePage() {
 
     return (
         <>
+            <SEO
+                title="Kulorwerkz with Thomasina | Luxury Nail Artist in Johnson City, TN"
+                description="Luxury nail artistry in Johnson City, Tennessee. Explore custom acrylic sets, gel polish, pedicures, nail art, and handcrafted designs by Thomasina."
+                canonical="https://kulorwerkz.com/"
+            />
             <Hero />
             <Services />
             <LuxuryCTA />

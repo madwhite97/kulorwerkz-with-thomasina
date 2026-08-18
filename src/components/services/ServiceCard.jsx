@@ -14,7 +14,7 @@ function ServiceCard({ service }) {
 
             <h3>{service.title}</h3>
 
-            <div classname="gold-line" />
+            <div className="gold-line" />
 
             <p>{service.description}</p>
 

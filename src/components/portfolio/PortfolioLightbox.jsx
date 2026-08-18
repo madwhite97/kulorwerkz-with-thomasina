@@ -1,4 +1,5 @@
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { getPortfolioAlt } from "../../data/portfolioAlt";
 
 export default function PortfolioLightbox({
     images,
@@ -36,7 +37,7 @@ export default function PortfolioLightbox({
 
             <img
                 src={images[selectedIndex]}
-                alt={`Luxury nail design ${selectedIndex + 1}`}
+                alt={getPortfolioAlt(images[selectedIndex])}
                 className="portfolio-lightbox-image"
                 onClick={(e) => e.stopPropagation()}
             />

@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Sparkles } from "lucide-react";
 
 import "./portfolio.css";
 import Footer from "../footer/Footer";
 import PortfolioLightbox from "./PortfolioLightbox";
+import { getPortfolioAlt } from "../../data/portfolioAlt";
+import SEO from "../SEO";
 
 const images = Object.values(
     import.meta.glob(
@@ -79,14 +82,20 @@ export default function Portfolio() {
 
     return (
         <>
+            <SEO
+                title="Luxury Nail Portfolio | Kulorwerkz with Thomasina"
+                description="Explore the luxury nail art portfolio of Kulorwerkz with Thomasina in Johnson City, Tennessee. Browse custom nail sets, detailed nail art, and handcrafted designs."
+                canonical="https://kulorwerkz.com/portfolio"
+            />
+            
             <main className="portfolio-page">
-                
-                <a
-                    href="/#gallery"
+
+                <Link
+                    to="/#gallery"
                     className="back-home"
                 >
                     ← Return Home
-                </a>
+                </Link>
                 
                 {/* HERO */}
                 
@@ -139,10 +148,9 @@ export default function Portfolio() {
                             className="portfolio-image"
                             onClick={() => setSelectedIndex(index)}
                         >
-
                             <img
                                 src={image}
-                                alt={`Luxury nail design ${index + 1}`}
+                                alt={getPortfolioAlt(image)}
                                 loading="lazy"
                             />
 
@@ -168,13 +176,14 @@ export default function Portfolio() {
                     <p>
                         Let's design a custom set that's uniquely yours.
                     </p>
-                    
-                    <a
-                        href="/#contact"
+
+                    <Link
+                        to="/#contact"
                         className="portfolio-button"
                     >
-                        Book Your Experience 
-                    </a>
+                        Book Your Experience
+                    </Link>
+            
                     
                 </section>
                 

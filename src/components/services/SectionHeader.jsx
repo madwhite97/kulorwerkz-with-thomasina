@@ -10,13 +10,13 @@ function SectionHeader() {
 
             </span>
 
-            <h2>
+            <h1>
 
                 <span>Luxury </span>
 
                 Nail Services
 
-            </h2>
+            </h1>
 
             <div className="title-line" />
 
