@@ -13,6 +13,7 @@ import Footer from "./components/footer/Footer";
 import Portfolio from "./components/portfolio/Portfolio";
 
 import SEO from "./components/SEO";
+import NotFound from "./components/NotFound";
 
 
 function HomePage() {
@@ -60,6 +61,11 @@ export default function App() {
             <Route
                 path="/portfolio"
                 element={<Portfolio />}
+            />
+
+            <Route
+                path="*"
+                element={<NotFound />}
             />
 
         </Routes>
