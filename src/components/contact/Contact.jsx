@@ -130,7 +130,7 @@ export default function Contact() {
                   <h4>FOLLOW ALONG</h4>
 
                   <p>
-                    @kulorwerkzwiththomasina
+                    @thomidoinnails
                   </p>
 
                 </div>

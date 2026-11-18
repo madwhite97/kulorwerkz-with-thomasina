@@ -71,7 +71,9 @@ function Reviews() {
                 </div>
 
                 <a
-                    href="#"
+                    href="https://g.page/r/CVZ7A9ODdfGPEAE/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="reviews-button"
                 >
                     Read More Reviews

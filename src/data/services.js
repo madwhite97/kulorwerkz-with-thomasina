@@ -56,7 +56,7 @@ export default [
         price: "$65",
         icon: Flower2,
         description:
-            "An eleated pedicure experience with luxurious touches."
+            "An elevated pedicure experience with luxurious touches."
     },
 
     {
